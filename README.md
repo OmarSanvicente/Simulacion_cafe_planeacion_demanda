@@ -72,14 +72,14 @@ $$
 
 lo que implica:
 
-$$\begin{aligned}
-B =\;& 15
-&- \Bigg[
+$$
+B = 15 -
+\left[
 A_1 e^{-\frac{(15-8)^2}{2\sigma_1^2}}
 + A_2 e^{-\frac{(15-12)^2}{2\sigma_2^2}}
 + A_3 e^{-\frac{(15-18.5)^2}{2\sigma_3^2}}
-\Bigg]
-\end{aligned}$$
+\right]
+$$
 
 # Simulando mediante Poisson
 
@@ -100,15 +100,13 @@ $$
 
 La probabilidad de observar $k$ eventos en el intervalo $[a,b]$ es:
 
-$$P(N(a,b)=k) =
+$$
+P\bigl(N(a,b)=k\bigr) =
 \frac{
-\left(
-\int_a^b \lambda(t)\,dt
-\right)^k
-\exp\left(
-- \int_a^b \lambda(t)\,dt
-\right)
-}{k!}$$
+\left(\int_a^b \lambda(t)\,dt\right)^k
+\exp\!\left(-\int_a^b \lambda(t)\,dt\right)
+}{k!}
+$$
 
 Condicionado a $\lambda(t)$, los eventos son independientes, es decir la compra anterior no afecta a la siguiente.
 
