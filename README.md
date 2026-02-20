@@ -53,30 +53,27 @@ donde:
 
 
 En este caso, se consideran tres picos de actividad 8:00 am, 12:00 pm y 6:30 pm, por lo que la función de intensidad (tasa de ventas) queda como:
-
-$$
+```math
 \lambda(t) = B
 + A_1 \exp\!\left(-\frac{(t-8)^2}{2\sigma_1^2}\right)
 + A_2 \exp\!\left(-\frac{(t-12)^2}{2\sigma_2^2}\right)
 + A_3 \exp\!\left(-\frac{(t-18.5)^2}{2\sigma_3^2}\right)
-$$
+```
 
-$t$ se mide en horas y $\lambda(t)$ representa cafés por hora.
+$t$ se mide en horas y $\lambda(t)$ representa cafés por hora.  
 El parámetro $B$ se obtiene imponiendo la condición observada a las 15:00 hrs:
-
-$$
-\lambda(15 hrs) = 15 ventas
-$$
+```math
+\lambda(15\text{ hrs}) = 15\text{ ventas}
+```
 
 lo que implica:
-
-$$
+```math
 B = 15 - \left(
 A_1 e^{-\frac{(15-8)^2}{2\sigma_1^2}}
 + A_2 e^{-\frac{(15-12)^2}{2\sigma_2^2}}
 + A_3 e^{-\frac{(15-18.5)^2}{2\sigma_3^2}}
 \right)
-$$
+```
 
 # Simulando mediante Poisson
 
