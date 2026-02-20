@@ -46,7 +46,7 @@ donde:
 
 - $B$ es el nivel base de demanda
 - $A_i$ es la intensidad máxima del pico $i$
-- $\mu_i $ es la hora central del pico
+- $\mu_i$ es la hora central del pico
 - $\sigma_i$ controla la duración del pico
 
 # **Importante: Cada uno de los picos se modela mediante un nuevo termino en la sumatoria (en este caso nosotros tenemos 3 picos y corresponderan únicamente 3 terminos).**
@@ -55,11 +55,12 @@ donde:
 En este caso, se consideran tres picos de actividad 8:00 am, 12:00 pm y 6:30 pm, por lo que la función de intensidad (tasa de ventas) queda como:
 
 $$
-\lambda(t) =
-B
-+ A_1 \exp\left(-\frac{(t-8)^2}{2\sigma_1^2}\right)
-+ A_2 \exp\left(-\frac{(t-12)^2}{2\sigma_2^2}\right)
-+ A_3 \exp\left(-\frac{(t-18.5)^2}{2\sigma_3^2}\right)
+\begin{aligned}
+\lambda(t) =\;& B \\
+&+ A_1 \exp\left(-\frac{(t-8)^2}{2\sigma_1^2}\right) \\
+&+ A_2 \exp\left(-\frac{(t-12)^2}{2\sigma_2^2}\right) \\
+&+ A_3 \exp\left(-\frac{(t-18.5)^2}{2\sigma_3^2}\right)
+\end{aligned}
 $$
 
 $t$ se mide en horas y $\lambda(t)$ representa cafés por hora.
@@ -72,12 +73,14 @@ $$
 lo que implica:
 
 $$
-B = 15 -
-\left[
+\begin{aligned}
+B =\;& 15 \\
+&- \Bigg[
 A_1 e^{-\frac{(15-8)^2}{2\sigma_1^2}}
 + A_2 e^{-\frac{(15-12)^2}{2\sigma_2^2}}
 + A_3 e^{-\frac{(15-18.5)^2}{2\sigma_3^2}}
-\right]
+\Bigg]
+\end{aligned}
 $$
 
 # Simulando mediante Poisson
@@ -159,8 +162,6 @@ Podemos ver que el consumo diario de cafe ronda entorno al promedio del día.
 
 Vamos a calcular el Stock de Seguridad $SS$ 
 
-$
-SS = P95 - media
-$
+$SS = P95 - media$
 
 
