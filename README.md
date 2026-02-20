@@ -56,10 +56,10 @@ En este caso, se consideran tres picos de actividad 8:00 am, 12:00 pm y 6:30 pm,
 
 $$
 \begin{aligned}
-\lambda(t) =\;& B \\
-&+ A_1 \exp\left(-\frac{(t-8)^2}{2\sigma_1^2}\right) \\
-&+ A_2 \exp\left(-\frac{(t-12)^2}{2\sigma_2^2}\right) \\
-&+ A_3 \exp\left(-\frac{(t-18.5)^2}{2\sigma_3^2}\right)
+\lambda(t) =B
++ A_1 \exp\left(-\frac{(t-8)^2}{2\sigma_1^2}\right)
++ A_2 \exp\left(-\frac{(t-12)^2}{2\sigma_2^2}\right)
++ A_3 \exp\left(-\frac{(t-18.5)^2}{2\sigma_3^2}\right)
 \end{aligned}
 $$
 
@@ -72,16 +72,14 @@ $$
 
 lo que implica:
 
-$$
-\begin{aligned}
-B =\;& 15 \\
+$$\begin{aligned}
+B =\;& 15
 &- \Bigg[
 A_1 e^{-\frac{(15-8)^2}{2\sigma_1^2}}
 + A_2 e^{-\frac{(15-12)^2}{2\sigma_2^2}}
 + A_3 e^{-\frac{(15-18.5)^2}{2\sigma_3^2}}
 \Bigg]
-\end{aligned}
-$$
+\end{aligned}$$
 
 # Simulando mediante Poisson
 
@@ -102,8 +100,7 @@ $$
 
 La probabilidad de observar $k$ eventos en el intervalo $[a,b]$ es:
 
-$$
-P(N(a,b)=k) =
+$$P(N(a,b)=k) =
 \frac{
 \left(
 \int_a^b \lambda(t)\,dt
@@ -111,8 +108,7 @@ P(N(a,b)=k) =
 \exp\left(
 - \int_a^b \lambda(t)\,dt
 \right)
-}{k!}
-$$
+}{k!}$$
 
 Condicionado a $\lambda(t)$, los eventos son independientes, es decir la compra anterior no afecta a la siguiente.
 
